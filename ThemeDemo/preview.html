@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <script>
+            //MARK: - 适配rem
+            window.scale = 1.0; //标志当前viewport使用的scale
+            !function(e){function t(a){if(i[a])return i[a].exports;var n=i[a]={exports:{},id:a,loaded:!1};return e[a].call(n.exports,n,n.exports,t),n.loaded=!0,n.exports}var i={};return t.m=e,t.c=i,t.p="",t(0)}([function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var i=window;t["default"]=i.flex=function(normal,e,t){var a=e||100,n=t||1,r=i.document,o=navigator.userAgent,d=o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),l=o.match(/U3\/((\d+|\.){5,})/i),c=l&&parseInt(l[1].split(".").join(""),10)>=80,p=navigator.appVersion.match(/(iphone|ipad|ipod)/gi),s=i.devicePixelRatio||1;p||d&&d[1]>534||c||(s=1);var u=normal?1:1/s,m=r.querySelector('meta[name="viewport"]');m||(m=r.createElement("meta"),m.setAttribute("name","viewport"),r.head.appendChild(m)),m.setAttribute("content","width=device-width,user-scalable=no,initial-scale="+u+",maximum-scale="+u+",minimum-scale="+u),i.scale=u,r.documentElement.style.fontSize=normal?"50px": a/2*s*n+"px"},e.exports=t["default"]}]); flex(false,100, 1);
+            
+            //MARK: - Enclave Plugins
+            var Enclave = {};
+            
+            /*
+             夜间模式
+             */
+        //切换到夜间模式
+        Enclave.switchToNightMode = function() {
+            document.querySelector('html').classList.add('night-mode')
+        }
+        
+        //切换到夜间模式
+        Enclave.switchToLightMode = function() {
+            document.querySelector('html').classList.remove('night-mode')
+        }
+        </script>
+
+        <style>
+        html {
+            font-size: 62.5%;
+        }
+        *{margin:0;padding: 0;}
+        #articleCon *{margin: 0;}
+        #articleCon p {
+            padding: 0 0.4rem;
+        }
+
+        /*字体*/
+        #articleCon{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        /*正文*/
+        #articleCon p{
+            margin-top: 0.6rem;
+            text-align:justify;
+        }
+
+        /*普通文本*/
+        #articleCon p{
+            font-size: 0.34rem;
+            font-weight: 400;
+            color: #4D4D4D;
+            line-height:0.56rem;
+            letter-spacing:0.006rem;
+        }
+        
+        /*黑夜模式*/
+        .night-mode {
+            background-color: #333333
+        }
+        .night-mode #articleCon,
+        .night-mode #articleCon p {
+            color: #CDCDCD;
+        }
+        </style>
+    </head>
+    <body id="articleCon">
+        {content}
+    </body>
+</html>
+

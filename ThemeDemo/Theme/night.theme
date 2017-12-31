@@ -1,0 +1,20 @@
+{
+    "colors": {
+        "tint": "#9A9A9A",
+        "background": "#333333",
+        "text": "#9A9A9A",
+        "placeholder": "#BDBDBD5F",
+        "separator": "#717073",
+        "shadow_layer": "#0000003d",
+        "tabBar_background": "#333333",
+        "tabBar_normal": "#515151",
+        "tabBar_selected": "#9A9A9A",
+        "navigationBar_background": "#333333",
+        "cell_background": "#333333",
+        "cell_selected_background": "#414141",
+        "switch_tint": "#2B4F7A"
+    },
+    "images": {
+        
+    }
+}
